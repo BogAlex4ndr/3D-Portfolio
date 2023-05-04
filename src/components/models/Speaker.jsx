@@ -1,9 +1,9 @@
 import { Decal, Html, useGLTF } from '@react-three/drei';
-import { geometry } from 'maath';
 import React, { useLayoutEffect } from 'react';
+import modelSpeaker from '../../assets/3Dmodels/speaker.glb';
 
 const Speaker = ({ ...props }) => {
-  const { nodes, materials } = useGLTF('./src/assets/3Dmodels/speaker.glb');
+  const { nodes, materials } = useGLTF(modelSpeaker);
 
   useLayoutEffect(() => {
     materials['Speaker'].color.set('rgb(125, 125, 125)');

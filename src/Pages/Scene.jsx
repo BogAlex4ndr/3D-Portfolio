@@ -28,6 +28,7 @@ import Mouse from '../components/models/Mouse';
 import Cup from '../components/models/Cup';
 import Lamp from '../components/models/Lamp';
 import Resume from '../components/Resume';
+import camereSound from '../assets/sounds/camera-shutter-click-01.mp3';
 
 const Scene = ({ ...props }) => {
   const camera = useRef();
@@ -36,7 +37,7 @@ const Scene = ({ ...props }) => {
   const [targetId, setTargetId] = useState('');
   const [buttonLock, setButtonLock] = useState(false);
   const mobileWidth = window.innerWidth < 600;
-  const audioClick = new Audio('./src/assets/sounds/camera-shutter-click-01.mp3');
+  const audioClick = new Audio(camereSound);
 
   audioClick.volume = 0.2;
 
@@ -273,7 +274,12 @@ const Scene = ({ ...props }) => {
       </Canvas>
       <Loader
         containerStyles={{ justifyContent: 'center' }}
-        innerStyles={{ background: '#07b39b', borderRadius: '10px', height: '25px', width: '135px' }}
+        innerStyles={{
+          background: '#07b39b',
+          borderRadius: '10px',
+          height: '25px',
+          width: '135px',
+        }}
         barStyles={{ background: '#ffff00', height: '25px', width: '135px', borderRadius: '10px' }}
         dataStyles={{ color: '#ffff00', fontSize: '16px' }}
       />

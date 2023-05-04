@@ -1,10 +1,9 @@
 import { useAnimations, useGLTF } from '@react-three/drei';
 import React, { useEffect } from 'react';
+import modelRobot from '../../assets/3Dmodels/360_sphere_robot.glb';
 
 const Helmet = ({ ...props }) => {
-  const { scene, nodes, materials, animations } = useGLTF(
-    './src/assets/3Dmodels/360_sphere_robot.glb',
-  );
+  const { scene, nodes, materials, animations } = useGLTF(modelRobot);
 
   const { actions } = useAnimations(animations, scene);
   useEffect(() => {

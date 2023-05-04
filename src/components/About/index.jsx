@@ -5,10 +5,11 @@ import { useSnapshot } from 'valtio';
 import state from '../../store';
 import { SiGmail, SiTelegram, SiLinkedin, SiGithub, SiSkype } from 'react-icons/si';
 import TopBorder from './TopBorder';
+import audioClick from '../../assets/sounds/button-49.mp3';
 const About = ({ targetId, handleCamera, ...props }) => {
   const buttons = useRef();
   const [currentShownPage, setCurrentShownPage] = useState('aboutBlock');
-  const CategoryAudioClick = new Audio('./src/assets/sounds/button-49.mp3');
+  const CategoryAudioClick = new Audio(audioClick);
   CategoryAudioClick.volume = 0.15;
 
   const Clicker = useRef();
