@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bruno Ace SC', cursive;
+  font-weight: 400;
+ 
+}
+
+body {
+  box-sizing: border-box;
+  user-select: none;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.canvas {
+  position: fixed;
+  height: 100vh !important;
+  width: 100vw !important;
+  background: #000000fd;
+  &:active {
+    cursor: move;
+  }
+}
+
+.SecondCanvas {
+  position: relative;
+  z-index: 30;
+  top: 20px;
+  left: 20px;
+}
+
+.content {
+  width: 334px;
+  height: 216px;
+  background: #743535;
+  border-radius: 33px;
+  overflow-y: auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.wrapper {
+  padding: 10px;
+  width: 668px;
+  height: 432px;
+  transform: scale(0.5);
+  transform-origin: top left;
+}
+
+.monitorAboutWrapper {
+  color: rgb(218, 218, 218);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+  overflow: hidden;
+  width: 438px;
+  height: 500px;
+  padding: 0;
+}
+.wrapperMonitor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(14, 14, 14);
+  font-size: 1.5rem;
+  width: 870px;
+  height: 436px;
+  border-radius: 0;
+  padding: 50px 25px;
+  &:active {
+    cursor: auto;
+  }
+}
+
+.monitorProjectsWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-size: cover;
+  overflow: auto;
+  width: 1150px;
+  height: 860px;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.wrapperLaptop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 8px;
+  background-color: rgb(148, 19, 19);
+  width: 800px;
+  height: 570px;
+  overflow: hidden;
+  background: linear-gradient(
+    30deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  background-size: 400%;
+  animation: bgAnimation 10s ease infinite;
+  a {
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 100px;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 5px 5px 0px #ffe600;
+    color: #00000000;
+    background: #00ecb92c;
+    box-shadow: 0px 0px 10px #00ecb9;
+    border-radius: 1rem;
+
+    &:hover {
+      text-shadow: 5px 5px 2px #ffe600;
+      color: #00d9ff;
+    }
+  }
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.Resume {
+}
+
+.wrapper_resume {
+}
+.wrapper_resume img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(252, 252, 252);
+}
+
+img {
+  padding: 0;
+  max-width: 30px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(196, 193, 24);
+  background: linear-gradient(0deg, rgb(153, 69, 1) 0%, rgb(7, 0, 68) 100%);
+  border-radius: 12px;
+}
+
+.title {
+  position: fixed;
+  z-index: 10;
+  top: 5px;
+  left: 10px;
+  color: white;
+}
+
+.header__wrapper {
+  background-color: rgba(0, 0, 0, 0.247);
+  position: fixed;
+  width: 220px;
+  height: 400px;
+  overflow: auto;
+  top: 150px;
+  left: 20px;
+  z-index: 50;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  border: 2px solid green;
+
+  padding: 20px;
+}
+
+.list {
+  min-width: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
