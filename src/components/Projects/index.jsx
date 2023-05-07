@@ -8,6 +8,8 @@ import circle3 from '../../assets/images/circle3.png';
 import pizzaImg from '../../assets/images/pizza.png';
 import chessImg from '../../assets/images/chess.png';
 import tetrisImg from '../../assets/images/tetris.png';
+import galleryImg from '../../assets/images/photo-gallery-mk.png';
+
 const Projects = ({ handleCamera, targetId, ...props }) => {
   const clickerRef = useRef();
 
@@ -75,10 +77,12 @@ const Projects = ({ handleCamera, targetId, ...props }) => {
                 </div>
               </div>
               <div className={styles.projectCard}>
-                <img src='./src/assets/images/photo-gallery-mk.png' alt='tetris' />
+                <img src={galleryImg} alt='tetris' />
                 <div className={styles.infoBlock}>
                   <h4>Photo gallery</h4>
-                  <p>A website where you can add, update and delete photo with simple admin panel</p>
+                  <p>
+                    A website where you can add, update and delete photo with simple admin panel
+                  </p>
                   <p className={styles.technologyBlock}>
                     MongoDB Express React Node.js TypeScript Scss
                   </p>

@@ -41,29 +41,31 @@ const Resume = ({ handleCamera, targetId, ...props }) => {
           )}
         </section>
       </Html>
-     {targetId === 'activeResume' && <Html
-        className={styles.buttonsScreen}
-        transform
-        distanceFactor={10}
-        scale={0.1}
-        occlude={'blending'}
-        position={[1.21, -0.16, -0.065]}>
-        <div className={styles.buttonsScreenWrapper}>
-          <a
-            href='https://drive.google.com/file/d/1WOeJ-2c_HrStiBiFX7MsXXkgTtk57CqM/view'
-            target='_blank'
-            rel='noopener noreferrer'>
-            <button className={styles.buttonDownload}>download</button>
-          </a>
-          <button
-            id='buttonBack'
-            className={styles.buttonBack}
-            disabled={false}
-            onClick={handleCamera}>
-            BACK
-          </button>
-        </div>
-      </Html>}
+      {targetId === 'activeResume' && (
+        <Html
+          className={styles.buttonsScreen}
+          transform
+          distanceFactor={10}
+          scale={0.1}
+          occlude={'blending'}
+          position={[1.21, -0.16, -0.065]}>
+          <div className={styles.buttonsScreenWrapper}>
+            <a
+              href='https://drive.google.com/file/d/1NHdoWbyuOxUBhfjmvLJXHXnuGxIZLqLa/view?usp=sharing'
+              target='_blank'
+              rel='noopener noreferrer'>
+              <button className={styles.buttonDownload}>download</button>
+            </a>
+            <button
+              id='buttonBack'
+              className={styles.buttonBack}
+              disabled={false}
+              onClick={handleCamera}>
+              BACK
+            </button>
+          </div>
+        </Html>
+      )}
     </mesh>
   );
 };
