@@ -16,7 +16,7 @@
 }
 
 .buttonAbout {
-  background: url('./src/assets/images/Bg-button.jpg');
+  background: url('../../assets/images/Bg-button.jpg');
   background-position: center;
   background-size: cover;
   padding: 10px 20px;
@@ -69,6 +69,13 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+ animation: apearButtons 2s ease-out;
+}
+
+@keyframes apearButtons {
+  from {
+    transform: translate(0,-100%);
+  }
 }
 
 .PreviewAbout {
@@ -151,7 +158,7 @@
 }
 
 .buttonBack {
-  background: url('./src/assets/images/Bg-button.jpg');
+  background: url('../../assets/images/Bg-button.jpg');
   background-position: center;
   background-size: 100% 100%;
   padding: 10px 20px;

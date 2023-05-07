@@ -1,6 +1,13 @@
 import { Html } from '@react-three/drei';
 import React, { useRef } from 'react';
 import styles from './Projects.module.scss';
+import tShirtImg from '../../assets/images/3Dsite.png';
+import circle from '../../assets/images/circle.png';
+import circle2 from '../../assets/images/circle2.png';
+import circle3 from '../../assets/images/circle3.png';
+import pizzaImg from '../../assets/images/pizza.png';
+import chessImg from '../../assets/images/chess.png';
+import tetrisImg from '../../assets/images/tetris.png';
 const Projects = ({ handleCamera, targetId, ...props }) => {
   const clickerRef = useRef();
 
@@ -14,34 +21,43 @@ const Projects = ({ handleCamera, targetId, ...props }) => {
         occlude={'blending'}>
         {targetId === 'activeProjects' ? (
           <section className={styles.PojectsWrapper}>
-            <img className={styles.circle} src='./src/assets/images/circle2.png' alt='' />
-            <img className={styles.circle2} src='./src/assets/images/circle.png' alt='' />
-            <img className={styles.circle3} src='./src/assets/images/circle3.png' alt='' />
+            <img className={styles.circle} src={circle} alt='' />
+            <img className={styles.circle2} src={circle2} alt='' />
+            <img className={styles.circle3} src={circle3} alt='' />
             <div className={styles.projectsItems}>
               <div className={styles.projectCard}>
                 <img src='https://i.ibb.co/HDSsm1K/guitar-Shop.png' alt='' />
                 <div className={styles.infoBlock}>
-                  <h4>Title</h4>
-                  <p>React JavaScript Sass</p>
+                  <h4>Guitar shop</h4>
+                  <p>A simple adaptive landing page for a guitar store using BEM methodology</p>
+                  <p className={styles.technologyBlock}>HTML CSS</p>
                   <div className={styles.linksBlock}>
-                    <a href='http://' target='_blank' rel='noopener noreferrer'>
+                    <a
+                      href='https://bogalex4ndr.github.io/Guitar-shop-html-css/'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       Demo
                     </a>
-                    <a href='http://' target='_blank' rel='noopener noreferrer'>
+                    <a
+                      href='https://github.com/BogAlex4ndr/Guitar-shop-html-css'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       Github
                     </a>
                   </div>
                 </div>
               </div>
               <div className={styles.projectCard}>
-                <img src='./src/assets/images/3Dsite.png' alt='' />
+                <img src={tShirtImg} alt='' />
                 <div className={styles.infoBlock}>
-                  <h4>3D T-shirt</h4>
+                  <h4>T-shirt customizer</h4>
                   <p>
                     A website where you can customize a 3D t-shirt or ask AI to draw a logo or
                     texture
                   </p>
-                  <p className={styles.technologyBlock}>React Three.js Tailwind</p>
+                  <p className={styles.technologyBlock}>
+                    React JavaScript Three.js Tailwind Express
+                  </p>
                   <div className={styles.linksBlock}>
                     <a
                       href='https://t-shirt-customizer3d.netlify.app'
@@ -61,8 +77,8 @@ const Projects = ({ handleCamera, targetId, ...props }) => {
               <div className={styles.projectCard}>
                 <img src='./src/assets/images/photo-gallery-mk.png' alt='tetris' />
                 <div className={styles.infoBlock}>
-                  <h4>Photo Gallery</h4>
-                  <p>website when you can add, update and delete photo with admin panel.</p>
+                  <h4>Photo gallery</h4>
+                  <p>A website where you can add, update and delete photo with simple admin panel</p>
                   <p className={styles.technologyBlock}>
                     MongoDB Express React Node.js TypeScript Scss
                   </p>
@@ -80,54 +96,69 @@ const Projects = ({ handleCamera, targetId, ...props }) => {
                 </div>
               </div>
               <div className={styles.projectCard}>
-                <img src='https://i.ibb.co/Qf0p7Gr/tetris.png' alt='tetris' />
+                <img src={tetrisImg} alt='tetris' />
                 <div className={styles.infoBlock}>
                   <h4>Tetris</h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nulla alias
-                    iusto eligendi tenetur ex ut aperiam cupiditate corporis eveniet.
+                    Simple tetris game on HTML, Vanilla JS and CSS where you can chose game
+                    difficulty and change background
                   </p>
+                  <p className={styles.technologyBlock}>HTML CSS JavaScript</p>
                   <div className={styles.linksBlock}>
-                    <a href='http://' target='_blank' rel='noopener noreferrer'>
+                    <a
+                      href='https://bogalex4ndr.github.io/Tetris/'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       Demo
                     </a>
-                    <a href='http://' target='_blank' rel='noopener noreferrer'>
+                    <a
+                      href='https://github.com/BogAlex4ndr/Tetris'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       GitHub
                     </a>
                   </div>
                 </div>
               </div>
               <div className={styles.projectCard}>
-                <img src='https://i.ibb.co/Qf0p7Gr/tetris.png' alt='tetris' />
+                <img src={pizzaImg} alt='tetris' />
                 <div className={styles.infoBlock}>
-                  <h4>Tetris</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nulla alias
-                    iusto eligendi tenetur ex ut aperiam cupiditate corporis eveniet.
-                  </p>
+                  <h4>Pizza</h4>
+                  <p>pizzeria website with sorting, searching and shopping cart</p>
+                  <p className={styles.technologyBlock}>React Redux JavaScript Scss Rest API</p>
                   <div className={styles.linksBlock}>
-                    <a href='http://' target='_blank' rel='noopener noreferrer'>
+                    <a
+                      href='https://pizza-ab.netlify.app'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       Demo
                     </a>
-                    <a href='http://' target='_blank' rel='noopener noreferrer'>
+                    <a
+                      href='https://github.com/BogAlex4ndr/Pizza'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       GitHub
                     </a>
                   </div>
                 </div>
               </div>
               <div className={styles.projectCard}>
-                <img src='https://i.ibb.co/Qf0p7Gr/tetris.png' alt='tetris' />
+                <img src={chessImg} alt='chess' />
                 <div className={styles.infoBlock}>
-                  <h4>Tetris</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nulla alias
-                    iusto eligendi tenetur ex ut aperiam cupiditate corporis eveniet.
-                  </p>
+                  <h4>Chess</h4>
+                  <p>Chess game using class-based coding style</p>
+                  <p className={styles.technologyBlock}>React TypeScript Scss</p>
                   <div className={styles.linksBlock}>
-                    <a href='http://' target='_blank' rel='noopener noreferrer'>
+                    <a
+                      href='https://chess-ab.netlify.app'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       Demo
                     </a>
-                    <a href='http://' target='_blank' rel='noopener noreferrer'>
+                    <a
+                      href='https://github.com/BogAlex4ndr/Chess'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       GitHub
                     </a>
                   </div>

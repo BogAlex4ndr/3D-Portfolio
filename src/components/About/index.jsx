@@ -56,11 +56,11 @@ const About = ({ targetId, handleCamera, ...props }) => {
                   <h2 className={styles.title}>Hi, I'm Alex</h2>
                   <h4>Front-end developer</h4>
                   <p>
-                    Check out some of my work in the Projects section. I don't have work expirience
-                    yet, but I redy to work. <br /> Feel free to connect or follow me on my
-                    Linkedin. I'm open to job opportunities where I can contribute, learn and grow.
-                    If you have a good one that matches my skills then don't hesitate to contact me.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, consequatur.
+                    well-organized and hard-working person, problem solver, always ready to learn
+                    new technologies and improve my skills to create high-quality and convenient
+                    applications for users. Although I don't have commercial work experience, I redy
+                    to join the team. <br /> Feel free to contact with me, I'm open to job
+                    opportunities where I can contribute, learn and grow.
                   </p>
                 </div>
               </div>
@@ -79,9 +79,9 @@ const About = ({ targetId, handleCamera, ...props }) => {
                   <li>Express</li>
                   <li>MongoDB</li>
                   <li>ThreeJS</li>
+                  <li>Redux</li>
                   <li>Git</li>
                   <li>REST API</li>
-                  <li>Figma</li>
                 </ul>
               </div>
             )}
@@ -140,37 +140,39 @@ const About = ({ targetId, handleCamera, ...props }) => {
           </div>
         )}
       </Html>
-      <Html
-        position={[-1.266, 0.12, 0.007]}
-        className={styles.monitorAboutNavigation}
-        transform
-        distanceFactor={10}
-        scale={0.1}
-        occlude={'blending'}>
-        <div id='buttons' ref={buttons} className={styles.wrapperNavigation}>
-          <button
-            onClick={changePage}
-            id='aboutBlock'
-            className={styles.buttonAbout}
-            aria-current={false}>
-            ABOUT
-          </button>
-          <button
-            onClick={changePage}
-            id='skillsBlock'
-            className={styles.buttonAbout}
-            aria-current={false}>
-            SKILLS
-          </button>
-          <button
-            onClick={changePage}
-            id='contactsBlock'
-            className={styles.buttonAbout}
-            aria-current={false}>
-            CONTACTS
-          </button>
-        </div>
-      </Html>
+      {targetId === 'activeAbout' && (
+        <Html
+          position={[-1.266, 0.12, 0.007]}
+          className={styles.monitorAboutNavigation}
+          transform
+          distanceFactor={10}
+          scale={0.1}
+          occlude={'blending'}>
+          <div id='buttons' ref={buttons} className={styles.wrapperNavigation}>
+            <button
+              onClick={changePage}
+              id='aboutBlock'
+              className={styles.buttonAbout}
+              aria-current={false}>
+              ABOUT
+            </button>
+            <button
+              onClick={changePage}
+              id='skillsBlock'
+              className={styles.buttonAbout}
+              aria-current={false}>
+              SKILLS
+            </button>
+            <button
+              onClick={changePage}
+              id='contactsBlock'
+              className={styles.buttonAbout}
+              aria-current={false}>
+              CONTACTS
+            </button>
+          </div>
+        </Html>
+      )}
     </group>
   );
 };

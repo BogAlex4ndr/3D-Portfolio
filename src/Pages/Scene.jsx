@@ -29,6 +29,7 @@ import Cup from '../components/models/Cup';
 import Lamp from '../components/models/Lamp';
 import Resume from '../components/Resume';
 import camereSound from '../assets/sounds/camera-shutter-click-01.mp3';
+import FlatScreen from '../components/models/FlatScreen';
 
 const Scene = ({ ...props }) => {
   const camera = useRef();
@@ -99,7 +100,7 @@ const Scene = ({ ...props }) => {
               makeDefault
               position={cameraPosition}
               fov={mobileWidth ? 80 : 50}
-              far={mobileWidth ? 40 : 250}
+              far={mobileWidth ? 60 : 250}
             />
             <OrbitControls
               ref={controls}
@@ -186,6 +187,7 @@ const Scene = ({ ...props }) => {
             <Helmet rotation={[0, 0, 0]} position={[2.8, 1, 0]} scale={2} />
             <Cup rotation={[0, -1.3, 0]} position={[-1.6, -0.1, 0.4]} />
             <Mouse castShadow scale={4} rotation={[0, 0.2, 0]} position={[1.5, -0.08, 0.3]} />
+
             <About
               rotation={[0, 0, 0]}
               position={[-2.17, 2.69, -2.35]}
@@ -209,6 +211,7 @@ const Scene = ({ ...props }) => {
               <Monitor rotation={[0, 0, 0]} position={[-2.88, 3.15, -2.37]} scale={2} />
               <Display rotation={[0, 0, 0]} position={[2.8, 2.47, -1.27]} scale={1.5} />
               <SiFiDisplay rotation={[0, 0, Math.PI / 2]} position={[5.21, 2.7, -2.4]} scale={6} />
+              <FlatScreen rotation={[0, 0, -Math.PI / 2]} position={[5.25, 2.6, -2.5]} />
             </group>
           </group>
 
