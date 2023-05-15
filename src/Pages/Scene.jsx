@@ -106,7 +106,7 @@ const Scene = ({ ...props }) => {
               ref={controls}
               minAzimuthAngle={-1.6}
               maxAzimuthAngle={1.6}
-              enablePan={true}
+              enablePan={false}
               enableZoom={true}
               minDistance={2.4}
               maxDistance={14}

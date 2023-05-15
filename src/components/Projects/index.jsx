@@ -94,7 +94,7 @@ const Projects = ({ handleCamera, targetId, ...props }) => {
                       Demo
                     </a>
                     <a href='http://' target='_blank' rel='noopener noreferrer'>
-                      GitHub
+                      Github
                     </a>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ const Projects = ({ handleCamera, targetId, ...props }) => {
                       href='https://github.com/BogAlex4ndr/Tetris'
                       target='_blank'
                       rel='noopener noreferrer'>
-                      GitHub
+                      Github
                     </a>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const Projects = ({ handleCamera, targetId, ...props }) => {
                       href='https://github.com/BogAlex4ndr/Pizza'
                       target='_blank'
                       rel='noopener noreferrer'>
-                      GitHub
+                      Github
                     </a>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ const Projects = ({ handleCamera, targetId, ...props }) => {
                       href='https://github.com/BogAlex4ndr/Chess'
                       target='_blank'
                       rel='noopener noreferrer'>
-                      GitHub
+                      Github
                     </a>
                   </div>
                 </div>
