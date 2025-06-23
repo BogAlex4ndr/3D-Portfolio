@@ -6,7 +6,7 @@ import circle from '../../assets/images/circle.png';
 import circle2 from '../../assets/images/circle2.png';
 import circle3 from '../../assets/images/circle3.png';
 import pizzaImg from '../../assets/images/pizza.png';
-import asteralImg from '../../assets/images/asteral.webp';
+import asteralImg from '../../assets/images/asteral.png';
 import tetrisImg from '../../assets/images/tetris.png';
 import galleryImg from '../../assets/images/photo-gallery-mk.png';
 
