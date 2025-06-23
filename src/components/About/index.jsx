@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import styles from './About.module.scss';
 import { useSnapshot } from 'valtio';
 import state from '../../store';
-import { SiGmail, SiTelegram, SiLinkedin, SiGithub, SiSkype } from 'react-icons/si';
+import { SiGmail, SiTelegram, SiLinkedin, SiGithub } from 'react-icons/si';
 import TopBorder from './TopBorder';
 import audioClick from '../../assets/sounds/button-49.mp3';
 const About = ({ targetId, handleCamera, ...props }) => {
@@ -70,20 +70,18 @@ const About = ({ targetId, handleCamera, ...props }) => {
             {currentShownPage === 'skillsBlock' && (
               <div>
                 <ul className={styles.skillsList}>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>Sass</li>
-                  <li>JavaScript</li>
                   <li>TypeScript</li>
-                  <li>Tailwind</li>
-                  <li>ReactJS</li>
-                  <li>NodeJS</li>
-                  <li>Express</li>
-                  <li>MongoDB</li>
-                  <li>ThreeJS</li>
-                  <li>Redux</li>
-                  <li>Git</li>
+                  <li>JavaScript</li>
+                  <li>React</li>
+                  <li>React Native</li>
+                  <li>Redux Toolkit</li>
+                  <li>Tailwind CSS</li>
+                  <li>Next.js</li>
+                  <li>Three.js</li>
                   <li>REST API</li>
+                  <li>Socket.io</li>
+                  <li>Firebase</li>
+                  <li>AdMob</li>
                 </ul>
               </div>
             )}
@@ -95,9 +93,6 @@ const About = ({ targetId, handleCamera, ...props }) => {
                   </a>
                   <a href="https://t.me/ALEX_B0G" target="_blank">
                     <SiTelegram className={styles.contactIcon} /> Telegram
-                  </a>
-                  <a href="skype:live:.cid.218e2dfebe7052f6?add" target="_blank">
-                    <SiSkype className={styles.contactIcon} /> Skype
                   </a>
                   <a target="_blank" href="https://www.linkedin.com/in/alexandr-bohar-33045b182/">
                     <SiLinkedin className={styles.contactIcon} /> LinkedIn
