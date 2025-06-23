@@ -1,5 +1,5 @@
 import { useGLTF } from '@react-three/drei';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import modelCup from '../../assets/3Dmodels/metal_door.glb';
 
 const Door = ({ ...props }) => {

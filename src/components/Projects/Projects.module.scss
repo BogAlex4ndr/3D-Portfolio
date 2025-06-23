@@ -85,6 +85,7 @@
   padding-top: 20px;
   padding-inline: 40px;
   cursor: auto;
+  overflow: hidden;
 }
 .projectsItems {
   position: relative;
@@ -378,6 +379,22 @@
   max-height: 100%;
   border-radius: 50%;
   z-index: 4;
+}
+
+.circle,
+.circle2,
+.circle3 {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@media (max-width: 600px) {
+  .circle,
+  .circle2,
+  .circle3 {
+    animation: none;
+  }
 }
 
 @keyframes circleAnimation {

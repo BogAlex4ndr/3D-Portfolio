@@ -1,5 +1,5 @@
 import { Html } from '@react-three/drei';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import styles from './Projects.module.scss';
 import tShirtImg from '../../assets/images/3Dsite.png';
 import circle from '../../assets/images/circle.png';
@@ -12,7 +12,6 @@ import galleryImg from '../../assets/images/photo-gallery-mk.png';
 
 const Projects = ({ handleCamera, targetId, ...props }) => {
   const clickerRef = useRef();
-
   return (
     <mesh {...props}>
       <Html

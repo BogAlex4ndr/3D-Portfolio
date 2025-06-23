@@ -1,5 +1,5 @@
 import { Html } from '@react-three/drei';
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import styles from './Resume.module.scss';
 import cv from '../../assets/images/cv-2.png';
 import cvImage from '../../assets/images/CV_Frontend_Alex-Bohar.png';

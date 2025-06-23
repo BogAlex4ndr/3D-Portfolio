@@ -7,7 +7,6 @@ export const Helmet = forwardRef((props, ref) => {
   const { actions } = useAnimations(animations, scene);
 
   useEffect(() => {
-    // Включаем тени на всех мешах
     scene.traverse(child => {
       if (child.isMesh) {
         child.castShadow = true;
@@ -15,11 +14,10 @@ export const Helmet = forwardRef((props, ref) => {
       }
     });
 
-    // Запускаем нужную анимацию, если есть
     const animationName = 'sphere body|sphere bodyAction';
     const action = actions?.[animationName];
     if (action) {
-      action.reset().fadeIn(0.5).setEffectiveTimeScale(1).play(); // можно менять timeScale
+      action.reset().fadeIn(0.5).setEffectiveTimeScale(1).play();
     }
   }, [scene, actions]);
 

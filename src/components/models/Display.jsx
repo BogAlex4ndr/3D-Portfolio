@@ -1,5 +1,5 @@
 import { useGLTF } from '@react-three/drei';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import modelDisplay from '../../assets/3Dmodels/sci-fi_display.glb';
 
 const Display = ({ ...props }) => {

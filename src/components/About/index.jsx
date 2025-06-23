@@ -1,5 +1,5 @@
 import { Html } from '@react-three/drei';
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import styles from './About.module.scss';
 import { useSnapshot } from 'valtio';
 import state from '../../store';

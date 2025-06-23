@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import modelTable from '../../assets/3Dmodels/futuristic_desk.glb';
 import scifiTable from '../../assets/3Dmodels/sci-fi_table.glb';

@@ -1,5 +1,5 @@
-import { Decal, Html, useGLTF } from '@react-three/drei';
-import React, { useEffect, useLayoutEffect } from 'react';
+import { useGLTF } from '@react-three/drei';
+import { useLayoutEffect } from 'react';
 import modelSpeaker from '../../assets/3Dmodels/speaker.glb';
 
 const Speaker = ({ ...props }) => {

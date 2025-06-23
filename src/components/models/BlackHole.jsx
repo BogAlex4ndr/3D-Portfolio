@@ -4,11 +4,10 @@ import { useFrame } from '@react-three/fiber';
 import blackHole from '../../assets/3Dmodels/blackhole.glb';
 
 const BlackHole = ({ ...props }) => {
-  const groupRef = useRef(); // for rotation
+  const groupRef = useRef();
   const { scene, animations } = useGLTF(blackHole);
   const { actions } = useAnimations(animations, scene);
 
-  // Start animation with custom speed
   useEffect(() => {
     if (actions && actions['Take 001']) {
       const action = actions['Take 001'];
@@ -17,7 +16,6 @@ const BlackHole = ({ ...props }) => {
     }
   }, [actions]);
 
-  // Enable shadows
   useEffect(() => {
     scene.traverse(child => {
       if (child.isMesh) {
@@ -30,10 +28,9 @@ const BlackHole = ({ ...props }) => {
     });
   }, [scene]);
 
-  // Rotate the object every frame
   useFrame((_, delta) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y += delta * 0.1; // 0.5 rad/sec = ~28 deg/sec
+      groupRef.current.rotation.y += delta * 0.1;
     }
   });
 
