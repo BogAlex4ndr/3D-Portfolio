@@ -2,6 +2,7 @@ import { Html } from '@react-three/drei';
 import React, { useRef, useState } from 'react';
 import styles from './Resume.module.scss';
 import cv from '../../assets/images/cv-2.png';
+import cvImage from '../../assets/images/CV_Frontend_Alex-Bohar.png';
 
 const Resume = ({ handleCamera, targetId, ...props }) => {
   const clickerRef = useRef();
@@ -12,20 +13,22 @@ const Resume = ({ handleCamera, targetId, ...props }) => {
         transform
         distanceFactor={10}
         scale={0.1}
-        occlude={'blending'}>
+        occlude={'blending'}
+      >
         <section className={styles.wprapper}>
           {targetId === 'activeResume' ? (
             <div>
               <div className={styles.imageConteiner}>
-                <img src={cv} alt='' />
+                <img src={cvImage} alt="" />
               </div>
             </div>
           ) : (
             <div
               onClick={handleCamera}
-              id='resume'
+              id="resume"
               ref={clickerRef}
-              className={styles.previewProjects}>
+              className={styles.previewProjects}
+            >
               <div className={styles.previewImage} onClick={() => clickerRef.current.click()}>
                 <ul>
                   <li></li>
@@ -48,19 +51,22 @@ const Resume = ({ handleCamera, targetId, ...props }) => {
           distanceFactor={10}
           scale={0.1}
           occlude={'blending'}
-          position={[1.21, -0.16, -0.065]}>
+          position={[1.21, -0.16, -0.065]}
+        >
           <div className={styles.buttonsScreenWrapper}>
             <a
-              href='https://drive.google.com/file/d/1NHdoWbyuOxUBhfjmvLJXHXnuGxIZLqLa/view?usp=sharing'
-              target='_blank'
-              rel='noopener noreferrer'>
+              href="https://drive.google.com/file/d/1vnQrLKzcBfy4mnRTqf22Rw2yxpa6PHAh/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button className={styles.buttonDownload}>download</button>
             </a>
             <button
-              id='buttonBack'
+              id="buttonBack"
               className={styles.buttonBack}
               disabled={false}
-              onClick={handleCamera}>
+              onClick={handleCamera}
+            >
               BACK
             </button>
           </div>

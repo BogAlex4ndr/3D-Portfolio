@@ -1,13 +1,18 @@
 import { useGLTF } from '@react-three/drei';
-import React from 'react';
+import React, { useEffect } from 'react';
 import modelMouse from '../../assets/3Dmodels/mouse.glb';
 
 const Mouse = ({ ...props }) => {
   const { scene, nodes, materials } = useGLTF(modelMouse);
-  return (
-    <mesh {...props}>
-      <primitive object={scene} />
-    </mesh>
-  );
+  useEffect(() => {
+    scene.traverse(child => {
+      if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+      }
+    });
+  }, [scene]);
+
+  return <primitive object={scene} {...props} />;
 };
 export default Mouse;

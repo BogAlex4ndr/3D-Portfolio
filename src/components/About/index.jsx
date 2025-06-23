@@ -16,7 +16,7 @@ const About = ({ targetId, handleCamera, ...props }) => {
 
   const snap = useSnapshot(state);
 
-  const changePage = (e) => {
+  const changePage = e => {
     CategoryAudioClick.play();
 
     switch (e.target.id) {
@@ -41,9 +41,10 @@ const About = ({ targetId, handleCamera, ...props }) => {
         transform
         distanceFactor={10}
         scale={0.1}
-        occlude={'blending'}>
+        occlude={'blending'}
+      >
         {targetId === 'activeAbout' ? (
-          <section className='wrapperMonitor'>
+          <section className="wrapperMonitor">
             <div className={styles.leftTop}>
               <TopBorder />
             </div>
@@ -56,11 +57,12 @@ const About = ({ targetId, handleCamera, ...props }) => {
                   <h2 className={styles.title}>Hi, I'm Alex</h2>
                   <h4>Front-end developer</h4>
                   <p>
-                    well-organized and hard-working person, problem solver, always ready to learn
-                    new technologies and improve my skills to create high-quality and convenient
-                    applications for users. Although I don't have commercial work experience, I redy
-                    to join the team. <br /> Feel free to contact with me, I'm open to job
-                    opportunities where I can contribute, learn and grow.
+                    I’m a well-organized and dedicated individual with a strong focus on
+                    problem-solving. Always eager to learn new technologies and grow as a developer,
+                    I strive to build high-quality, user-friendly applications.
+                    <br />
+                    Feel free to reach out — I’m open to job opportunities where I can contribute,
+                    develop my skills, and grow together with the company.
                   </p>
                 </div>
               </div>
@@ -88,19 +90,19 @@ const About = ({ targetId, handleCamera, ...props }) => {
             {currentShownPage === 'contactsBlock' && (
               <div className={styles.contacts}>
                 <ul>
-                  <a target='_blank' href='mailto:bog.alex4ndr@gmail.com'>
+                  <a target="_blank" href="mailto:bog.alex4ndr@gmail.com">
                     <SiGmail className={styles.contactIcon} /> Gmail
                   </a>
-                  <a href='https://t.me/ALEX_B0G' target='_blank'>
+                  <a href="https://t.me/ALEX_B0G" target="_blank">
                     <SiTelegram className={styles.contactIcon} /> Telegram
                   </a>
-                  <a href='skype:live:.cid.218e2dfebe7052f6?add' target='_blank'>
+                  <a href="skype:live:.cid.218e2dfebe7052f6?add" target="_blank">
                     <SiSkype className={styles.contactIcon} /> Skype
                   </a>
-                  <a target='_blank' href='https://www.linkedin.com/in/alexandr-bohar-33045b182/'>
+                  <a target="_blank" href="https://www.linkedin.com/in/alexandr-bohar-33045b182/">
                     <SiLinkedin className={styles.contactIcon} /> LinkedIn
                   </a>
-                  <a href='https://github.com/BogAlex4ndr' target='_blank'>
+                  <a href="https://github.com/BogAlex4ndr" target="_blank">
                     <SiGithub className={styles.contactIcon} /> Github
                   </a>
                 </ul>
@@ -109,23 +111,25 @@ const About = ({ targetId, handleCamera, ...props }) => {
 
             <div className={styles.buttonsBlock}>
               <button
-                id='buttonBack'
+                id="buttonBack"
                 className={styles.buttonBack}
                 disabled={false}
-                onClick={handleCamera}>
+                onClick={handleCamera}
+              >
                 BACK
               </button>
               <button
-                id='projects'
+                id="projects"
                 className={styles.buttonBack}
                 disabled={false}
-                onClick={handleCamera}>
+                onClick={handleCamera}
+              >
                 NEXT
               </button>
             </div>
           </section>
         ) : (
-          <div id='about' ref={Clicker} onClick={handleCamera} className={styles.PreviewAbout}>
+          <div id="about" ref={Clicker} onClick={handleCamera} className={styles.PreviewAbout}>
             <div className={styles.previewImage} onClick={() => Clicker.current.click()}>
               <ul>
                 <li></li>
@@ -147,27 +151,31 @@ const About = ({ targetId, handleCamera, ...props }) => {
           transform
           distanceFactor={10}
           scale={0.1}
-          occlude={'blending'}>
-          <div id='buttons' ref={buttons} className={styles.wrapperNavigation}>
+          occlude={'blending'}
+        >
+          <div id="buttons" ref={buttons} className={styles.wrapperNavigation}>
             <button
               onClick={changePage}
-              id='aboutBlock'
+              id="aboutBlock"
               className={styles.buttonAbout}
-              aria-current={false}>
+              aria-current={false}
+            >
               ABOUT
             </button>
             <button
               onClick={changePage}
-              id='skillsBlock'
+              id="skillsBlock"
               className={styles.buttonAbout}
-              aria-current={false}>
+              aria-current={false}
+            >
               SKILLS
             </button>
             <button
               onClick={changePage}
-              id='contactsBlock'
+              id="contactsBlock"
               className={styles.buttonAbout}
-              aria-current={false}>
+              aria-current={false}
+            >
               CONTACTS
             </button>
           </div>

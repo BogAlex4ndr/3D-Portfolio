@@ -1,14 +1,20 @@
 import { useGLTF } from '@react-three/drei';
-import React from 'react';
+import React, { useEffect } from 'react';
 import modelLaptop from '../../assets/3Dmodels/cyberpunk_laptop.glb';
 
 const Laptop = ({ ...props }) => {
   const { scene, nodes, materials } = useGLTF(modelLaptop);
-  return (
-    <mesh {...props}>
-      <primitive castShadow object={scene} />
-    </mesh>
-  );
+
+  useEffect(() => {
+    scene.traverse(child => {
+      if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+      }
+    });
+  }, [scene]);
+
+  return <primitive castShadow object={scene} {...props} />;
 };
 
 export default Laptop;

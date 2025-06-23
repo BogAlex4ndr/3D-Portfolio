@@ -1,0 +1,12 @@
+export { default as Chair } from './Chair';
+export { default as Cup } from './Cup';
+export { default as Display } from './Display';
+export { default as FlatScreen } from './FlatScreen';
+export { default as GuitarComponent } from './GuitarComponent';
+export { default as Lamp } from './Lamp';
+export { default as Laptop } from './Laptop';
+export { default as Monitor } from './Monitor';
+export { default as Mouse } from './Mouse';
+export { default as SiFiDisplay } from './SiFiDisplay';
+export { default as Speaker } from './Speaker';
+export { default as Table } from './Table';

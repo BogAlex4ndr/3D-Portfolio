@@ -1,14 +1,19 @@
 import { useGLTF } from '@react-three/drei';
-import React from 'react';
+import React, { useEffect } from 'react';
 import modelScreen from '../../assets/3Dmodels/flat_screen_television.glb';
 
-const FlatScreen = ({...props}) => {
-    const { scene, nodes, materials } = useGLTF(modelScreen);
-    return (
-      <mesh {...props}>
-        <primitive key={'screen'} object={scene} scale={0.012} />
-      </mesh>
-    );
-}
+const FlatScreen = ({ ...props }) => {
+  const { scene, nodes, materials } = useGLTF(modelScreen);
 
-export default FlatScreen
+  useEffect(() => {
+    scene.traverse(child => {
+      if (child.isMesh) {
+        child.castShadow = true;
+      }
+    });
+  }, [scene]);
+
+  return <primitive key={'screen'} object={scene} scale={0.012} castShadow {...props} />;
+};
+
+export default FlatScreen;

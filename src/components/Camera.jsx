@@ -1,6 +1,6 @@
 import { useFrame } from '@react-three/fiber';
 import { easing } from 'maath';
-import React, { useState } from 'react';
+import React from 'react';
 
 const targetCameraPosition = {
   default: [4, 3.2, 12],
